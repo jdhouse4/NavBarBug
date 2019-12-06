@@ -9,77 +9,37 @@
 import SwiftUI
 
 struct ContentView: View {
+       @EnvironmentObject var launchEvents: LaunchEvents
 
-    @State var currentDate: Date            = Date()
-    @State private var showNewLaunch: Bool  = false
-
-
-    var timer: Timer {
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-            self.currentDate = Date()
-        }
-    }
+       @State private var selection = 0
 
 
     var body: some View {
-        NavigationView {
-            VStack {
-                // All of this puts the "+" on the trailing side and below the nav bar title.
-                HStack {
-                    Spacer(minLength: 10)
+        TabView(selection: $selection){
 
-                    Button(action: {
-                        print("Button Pushed")
-                        self.showNewLaunch.toggle()
-                        print("showNewLaunch: \(self.showNewLaunch)")
-                    }) {
-                        Image(systemName: "plus")
+            ContentViewNavBarItems()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "wrench.fill")
                             .imageScale(.medium)
-                    }
-                    .padding()
-                }
-
-
-                // MARK: - List
-                List(launchData) { launch in
-                    NavigationLink(destination: LaunchDetail(launch: launch)) {
-                        HStack(spacing: 15) {
-                            LaunchRow(launch: launch, currentDate: self.$currentDate)
-                        }
+                        Text("NavBarItems")
                     }
                 }
-                .animation(.easeInOut)
-            }
-            // MARK: Note, placement of .sheet is important
-            // especially when dealing with List or ForEach. Messing this up can cause some interesting errors
-            // that educate one o the inner-workings of SwiftUI that might be TL;DR.
-            .sheet(isPresented: self.$showNewLaunch) {
-                LaunchModalView()
-            }
-
-            .navigationBarTitle(Text("Launches"))
+                .tag(0)
 
 
-                // This sets "+" Add button above nav bar title.
-                .navigationBarItems(trailing:
-                    Button(action: {
-                        print("Button Pushed")
-                        self.showNewLaunch.toggle()
-                    }) {
-                        Image(systemName: "plus")
+
+            ContentViewNonNavBarItem()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "hammer.fill")
                             .imageScale(.medium)
+                        Text("View Stack")
                     }
-            )
+                }
+                .tag(1)
         }
-
-        .onAppear {
-            _ = self.timer
-            RunLoop.current.add(self.timer, forMode: RunLoop.Mode.common)
-        }
-
-        .onDisappear {
-            self.timer.invalidate()
-        }
+        //.edgesIgnoringSafeArea(.top)
     }
 }
 
