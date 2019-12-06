@@ -13,7 +13,7 @@ import MapKit
 
 
 
-struct LaunchEvent: Identifiable
+struct LaunchEvent: Identifiable, Hashable, Codable
 {
     var id: Int // Needed for Identifiable protocol
     var launchName : String
