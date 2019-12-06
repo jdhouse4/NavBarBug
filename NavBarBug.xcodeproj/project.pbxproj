@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E66B0DEC239A196A00BBF29E /* ContentViewNavBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */; };
+		E66B0DEE239A199E00BBF29E /* ContentViewNonNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */; };
 		E6C4F16C239A0E1F004FCC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4F16B239A0E1F004FCC19 /* AppDelegate.swift */; };
 		E6C4F16E239A0E1F004FCC19 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4F16D239A0E1F004FCC19 /* SceneDelegate.swift */; };
 		E6C4F170239A0E1F004FCC19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4F16F239A0E1F004FCC19 /* ContentView.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewNavBarItems.swift; sourceTree = "<group>"; };
+		E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewNonNavBarItem.swift; sourceTree = "<group>"; };
 		E6C4F168239A0E1F004FCC19 /* NavBarBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavBarBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C4F16B239A0E1F004FCC19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6C4F16D239A0E1F004FCC19 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				E6C4F176239A0E21004FCC19 /* LaunchScreen.storyboard */,
 				E6C4F179239A0E21004FCC19 /* Info.plist */,
 				E6C4F173239A0E21004FCC19 /* Preview Content */,
+				E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */,
+				E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */,
 			);
 			path = NavBarBug;
 			sourceTree = "<group>";
@@ -169,12 +175,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6C4F185239A1260004FCC19 /* LaunchEvents.swift in Sources */,
+				E66B0DEE239A199E00BBF29E /* ContentViewNonNavBarItem.swift in Sources */,
 				E6C4F16C239A0E1F004FCC19 /* AppDelegate.swift in Sources */,
 				E6C4F184239A1260004FCC19 /* LaunchEvent.swift in Sources */,
 				E6C4F16E239A0E1F004FCC19 /* SceneDelegate.swift in Sources */,
 				E6C4F187239A1260004FCC19 /* LaunchDetail.swift in Sources */,
 				E6C4F188239A1260004FCC19 /* LaunchRow.swift in Sources */,
 				E6C4F170239A0E1F004FCC19 /* ContentView.swift in Sources */,
+				E66B0DEC239A196A00BBF29E /* ContentViewNavBarItems.swift in Sources */,
 				E6C4F18C239A139F004FCC19 /* Data.swift in Sources */,
 				E6C4F186239A1260004FCC19 /* LaunchModalView.swift in Sources */,
 			);

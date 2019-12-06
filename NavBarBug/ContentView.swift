@@ -24,6 +24,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // All of this puts the "+" on the trailing side and below the nav bar title.
                 HStack {
                     Spacer(minLength: 10)
 
@@ -57,6 +58,7 @@ struct ContentView: View {
             }
 
             .navigationBarTitle(Text("Launches"))
+
 
                 // This sets "+" Add button above nav bar title.
                 .navigationBarItems(trailing:
