@@ -10,63 +10,76 @@ import SwiftUI
 
 struct ContentViewNavBarItems: View {
 
-        @State var currentDate: Date            = Date()
-        @State private var showNewLaunch: Bool  = false
+    @State var currentDate: Date            = Date()
+    @State private var showNewLaunch: Bool  = false
+    @State private var shouldAnimate: Bool  = false
 
 
-        var timer: Timer {
-            Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
-                self.currentDate = Date()
-            }
+    var timer: Timer {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) {_ in
+            self.currentDate = Date()
         }
+    }
 
 
-        var body: some View {
-            NavigationView {
-                VStack {
- 
-                    // MARK: - List
-                    List(launchData) { launch in
-                        NavigationLink(destination: LaunchDetail(launch: launch)) {
-                            HStack(spacing: 15) {
-                                LaunchRow(launch: launch, currentDate: self.$currentDate)
-                            }
+    var body: some View {
+        NavigationView {
+            VStack {
+                ActivityIndicator(shouldAnimate: self.$shouldAnimate)
+
+                Button(action: {
+                    self.shouldAnimate = !self.shouldAnimate
+                }) {
+                    Text("Start/Stop")
+                        .foregroundColor(.white)
+                    .padding()
+                }
+                .background(Color.green)
+                .cornerRadius(5)
+
+
+                // MARK: - List
+                List(launchData) { launch in
+                    NavigationLink(destination: LaunchDetail(launch: launch)) {
+                        HStack(spacing: 15) {
+                            LaunchRow(launch: launch, currentDate: self.$currentDate)
                         }
                     }
-                    .animation(.easeInOut)
                 }
+                .animation(.easeInOut)
+            }
                 // MARK: Note, placement of .sheet is important
                 // especially when dealing with List or ForEach. Messing this up can cause some interesting errors
                 // that educate one o the inner-workings of SwiftUI that might be TL;DR.
                 .sheet(isPresented: self.$showNewLaunch) {
                     LaunchModalView()
-                }
-
-                .navigationBarTitle(Text("Launches"))
-
-
-                    // This sets "+" Add button above nav bar title.
-                    .navigationBarItems(trailing:
-                        Button(action: {
-                            print("Button Pushed")
-                            self.showNewLaunch.toggle()
-                        }) {
-                            Image(systemName: "plus")
-                                .imageScale(.medium)
-                        }
-                )
             }
 
-            .onAppear {
-                _ = self.timer
-                RunLoop.current.add(self.timer, forMode: RunLoop.Mode.common)
-            }
+            .navigationBarTitle(Text("Launches"))
 
-            .onDisappear {
-                self.timer.invalidate()
-            }
+
+                // This sets "+" Add button above nav bar title.
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        print("Button Pushed")
+                        self.showNewLaunch.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                            .imageScale(.medium)
+                    }
+            )
+        }
+
+        .onAppear {
+            _ = self.timer
+            RunLoop.current.add(self.timer, forMode: RunLoop.Mode.common)
+        }
+
+        .onDisappear {
+            self.timer.invalidate()
         }
     }
+}
 
 struct ContentViewNavBarItems_Previews: PreviewProvider {
     static var previews: some View {

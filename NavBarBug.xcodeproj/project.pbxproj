@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E615113A239CBBF1007050CC /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6151139239CBBF1007050CC /* ActivityIndicator.swift */; };
 		E66B0DEC239A196A00BBF29E /* ContentViewNavBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */; };
 		E66B0DEE239A199E00BBF29E /* ContentViewNonNavBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */; };
 		E6C4F16C239A0E1F004FCC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C4F16B239A0E1F004FCC19 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E6151139239CBBF1007050CC /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = NavBarBug/ActivityIndicator.swift; sourceTree = "<group>"; };
 		E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewNavBarItems.swift; sourceTree = "<group>"; };
 		E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewNonNavBarItem.swift; sourceTree = "<group>"; };
 		E6C4F168239A0E1F004FCC19 /* NavBarBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavBarBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 		E6C4F15F239A0E1F004FCC19 = {
 			isa = PBXGroup;
 			children = (
+				E6151139239CBBF1007050CC /* ActivityIndicator.swift */,
 				E6C4F16A239A0E1F004FCC19 /* NavBarBug */,
 				E6C4F169239A0E1F004FCC19 /* Products */,
 			);
@@ -78,6 +81,8 @@
 				E6C4F16B239A0E1F004FCC19 /* AppDelegate.swift */,
 				E6C4F16D239A0E1F004FCC19 /* SceneDelegate.swift */,
 				E6C4F16F239A0E1F004FCC19 /* ContentView.swift */,
+				E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */,
+				E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */,
 				E6C4F182239A1260004FCC19 /* LaunchDetail.swift */,
 				E6C4F181239A1260004FCC19 /* LaunchModalView.swift */,
 				E6C4F17F239A125F004FCC19 /* LaunchEvent.swift */,
@@ -88,8 +93,6 @@
 				E6C4F176239A0E21004FCC19 /* LaunchScreen.storyboard */,
 				E6C4F179239A0E21004FCC19 /* Info.plist */,
 				E6C4F173239A0E21004FCC19 /* Preview Content */,
-				E66B0DEB239A196A00BBF29E /* ContentViewNavBarItems.swift */,
-				E66B0DED239A199E00BBF29E /* ContentViewNonNavBarItem.swift */,
 			);
 			path = NavBarBug;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				E66B0DEE239A199E00BBF29E /* ContentViewNonNavBarItem.swift in Sources */,
 				E6C4F16C239A0E1F004FCC19 /* AppDelegate.swift in Sources */,
 				E6C4F184239A1260004FCC19 /* LaunchEvent.swift in Sources */,
+				E615113A239CBBF1007050CC /* ActivityIndicator.swift in Sources */,
 				E6C4F16E239A0E1F004FCC19 /* SceneDelegate.swift in Sources */,
 				E6C4F187239A1260004FCC19 /* LaunchDetail.swift in Sources */,
 				E6C4F188239A1260004FCC19 /* LaunchRow.swift in Sources */,
