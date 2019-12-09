@@ -13,10 +13,16 @@ import UIKit
 struct ActivityIndicator: UIViewRepresentable {
     @Binding var shouldAnimate: Bool
 
+
+    
     func makeUIView(context: Context) -> UIActivityIndicatorView {
         // Create the UIActivityIndicatorView here.
 
-        return UIActivityIndicatorView()
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.hidesWhenStopped  = true
+        activityIndicatorView.style             = .large
+
+        return activityIndicatorView
     }
 
 
