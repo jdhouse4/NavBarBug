@@ -15,9 +15,6 @@ struct LaunchRow: View {
 
 
         var body: some View {
-
-
-
             HStack {
 
                 Text(launch.launchName)
@@ -29,33 +26,6 @@ struct LaunchRow: View {
                 Text(stringFromTimeInterval())
                     .frame(width: 160, alignment: .trailing)
                     .font(.system(.body, design: .monospaced))
-
-
-
-                /*
-                Text(countDownString(from: launch.launchDate))
-                    .font(.custom("Menlo", size: 18))
-                */
-
-
-
-
-                /*
-                HStack {
-                    Text(plusMinusSign(launch.launchDate))
-                    Text(countdownDays(launch.launchDate))
-                    Text(countdownHours(launch.launchDate))
-                    Text(":")
-                    Text(countdownMinutes(launch.launchDate))
-                    Text(":")
-                    Text(countdownSeconds(launch.launchDate))
-
-                }
-                .frame(width: 200, alignment: .trailing)
-                .font(.system(.body, design: .monospaced))
-                //.font(.custom("Menlo-Italic", size: 16))
-                */
-            //.padding(2)
             }
         }
 
@@ -109,21 +79,6 @@ struct LaunchRow: View {
             return countdownString
         }
 
-
-        /*
-        func countDownString(from date: Date) -> String {
-            let calendar = Calendar(identifier: .gregorian)
-            let components = calendar.dateComponents([.day, .hour, .minute, .second],
-                                                     from: self.currentDate,
-                                                     to: self.launch.launchDate)
-
-            return String(format: "%02dd:%02dh:%02dm:%02ds",
-                          components.day ?? 00,
-                          components.hour ?? 00,
-                          components.minute ?? 00,
-                          components.second ?? 00)
-        }
-        */
 
 
         func plusMinusSign(_ launchDate: Date) -> String {

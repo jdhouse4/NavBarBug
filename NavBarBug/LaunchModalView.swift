@@ -13,7 +13,6 @@ struct LaunchModalView: View {
     @Environment(\.presentationMode) var presentationMode
 
     @State private var launchName: String = ""
-    //@Binding var isPresented: Bool
 
 
     var body: some View {
@@ -24,8 +23,6 @@ struct LaunchModalView: View {
                 Button(action: {
                     print("Dismiss new launch")
                     self.presentationMode.wrappedValue.dismiss()
-                    //self.isPresented.toggle()
-                    //print("self.isPresented: \(self.isPresented)")
                 }) {
                     Text("Cancel")
                 }
@@ -45,7 +42,6 @@ struct LaunchModalView: View {
             // The VStack for the Launch Info
             VStack(alignment: .leading, spacing: 24) {
                 TextField("Launch Name", text: $launchName, onEditingChanged: { (changed) in
-                   //print("self.isPresented: \(self.isPresented)")
 
                     if changed {
                         print("changed")

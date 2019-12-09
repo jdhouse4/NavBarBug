@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentViewNavBarItems: View {
+    @EnvironmentObject var launchEvents: LaunchEvents
 
     @State var currentDate: Date            = Date()
     @State private var showNewLaunch: Bool  = false
@@ -25,25 +26,14 @@ struct ContentViewNavBarItems: View {
     var body: some View {
         NavigationView {
             VStack {
-                ActivityIndicator(shouldAnimate: self.$shouldAnimate)
 
-                Button(action: {
-                    self.shouldAnimate = !self.shouldAnimate
-                }) {
-                    Text("Start/Stop")
-                        .foregroundColor(.white)
-                    .padding()
-                }
-                .background(Color.green)
-                .cornerRadius(5)
+                ActivityIndicator(shouldAnimate: self.$shouldAnimate)
 
 
                 // MARK: - List
                 List(launchData) { launch in
                     NavigationLink(destination: LaunchDetail(launch: launch)) {
-                        HStack(spacing: 15) {
-                            LaunchRow(launch: launch, currentDate: self.$currentDate)
-                        }
+                        LaunchRow(launch: launch, currentDate: self.$currentDate)
                     }
                 }
                 .animation(.easeInOut)
@@ -53,6 +43,7 @@ struct ContentViewNavBarItems: View {
                 // that educate one o the inner-workings of SwiftUI that might be TL;DR.
                 .sheet(isPresented: self.$showNewLaunch) {
                     LaunchModalView()
+                        .environmentObject(self.launchEvents)
             }
 
             .navigationBarTitle(Text("Launches"))
@@ -65,7 +56,7 @@ struct ContentViewNavBarItems: View {
                         self.showNewLaunch.toggle()
                     }) {
                         Image(systemName: "plus")
-                            .imageScale(.medium)
+                            .imageScale(.large)
                     }
             )
         }
@@ -78,6 +69,12 @@ struct ContentViewNavBarItems: View {
         .onDisappear {
             self.timer.invalidate()
         }
+    }
+
+
+
+    func stopActivityIndicator() -> Void {
+        self.shouldAnimate.toggle()
     }
 }
 

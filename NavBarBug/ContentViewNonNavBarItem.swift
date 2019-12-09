@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentViewNonNavBarItem: View {
+        @EnvironmentObject var launchEvents: LaunchEvents
 
         @State var currentDate: Date            = Date()
         @State private var showNewLaunch: Bool  = false
@@ -34,7 +35,7 @@ struct ContentViewNonNavBarItem: View {
                             print("showNewLaunch: \(self.showNewLaunch)")
                         }) {
                             Image(systemName: "plus")
-                                .imageScale(.medium)
+                                .imageScale(.large)
                         }
                         .padding()
                     }
@@ -43,9 +44,7 @@ struct ContentViewNonNavBarItem: View {
                     // MARK: - List
                     List(launchData) { launch in
                         NavigationLink(destination: LaunchDetail(launch: launch)) {
-                            HStack(spacing: 15) {
-                                LaunchRow(launch: launch, currentDate: self.$currentDate)
-                            }
+                            LaunchRow(launch: launch, currentDate: self.$currentDate)
                         }
                     }
                     .animation(.easeInOut)
