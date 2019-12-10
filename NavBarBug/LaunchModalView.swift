@@ -39,6 +39,9 @@ struct LaunchModalView: View {
             }
             .padding()
 
+            Text("Launches: \(self.launchEvents.launches.count)")
+
+
             // The VStack for the Launch Info
             VStack(alignment: .leading, spacing: 24) {
                 TextField("Launch Name", text: $launchName, onEditingChanged: { (changed) in

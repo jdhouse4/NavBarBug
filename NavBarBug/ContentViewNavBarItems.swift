@@ -29,6 +29,7 @@ struct ContentViewNavBarItems: View {
 
                 ActivityIndicator(shouldAnimate: self.$shouldAnimate)
 
+                Text("Launches: \(launchData.count)")
 
                 // MARK: - List
                 List(launchData) { launch in
