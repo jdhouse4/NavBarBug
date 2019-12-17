@@ -10,6 +10,7 @@ import SwiftUI
 import CoreLocation
 
 let launchData: [LaunchEvent] = load("launchData.json")
+//@Binding var launches: [LaunchEvent] = launchData
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

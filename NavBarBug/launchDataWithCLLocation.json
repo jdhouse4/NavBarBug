@@ -1,0 +1,139 @@
+
+[
+    {
+        "launchName": "EFT-1",
+        "launchDate": "2014-12-05 09:05:00",
+        "id": 1001,
+        "coordinates": {
+            "longitude": -116.166868,
+            "latitude": 34.011286
+        },
+    },
+    {
+        "launchName": "Artemis 1",
+        "launchDate": "2020-12-20 08:30:00",
+        "id": 1002,
+        "coordinates": {
+            "longitude": -152.665167,
+            "latitude": 59.980167
+        },
+    },
+    {
+        "launchName": "Artemis 2",
+        "launchDate": "2021-07-20 08:20:15",
+        "id": 1003,
+        "coordinates": {
+            "longitude": -135.334571,
+            "latitude": 59.560551
+        },
+    },
+    {
+        "launchName": "Artemis 3",
+        "launchDate": "2022-07-20 21:56:15",
+        "id": 1004,
+        "coordinates": {
+            "longitude": -113.536248,
+            "latitude": 48.69423
+        },
+    },
+    {
+        "launchName": "Artemis 4",
+        "launchDate": "2024-01-05 08:05:00",
+        "id": 1005,
+        "coordinates": {
+            "longitude": -153.849883,
+            "latitude": 60.641684
+        },
+    },
+    {
+        "launchName": "Artemis 5",
+        "launchDate": "2025-02-02 11:00:00",
+        "id": 1006,
+        "coordinates": {
+            "longitude": -113.934831,
+            "latitude": 48.56002
+        },
+    },
+    {
+        "launchName": "Artemis 6",
+        "launchDate": "2025-09-27 15:30:00",
+        "id": 1007,
+        "coordinates": {
+            "longitude": -143.122586,
+            "latitude": 65.350021
+        },
+    },
+    {
+        "launchName": "Artemis 7",
+        "launchDate": "2026-01-15 09:45:00",
+        "id": 1008,
+        "coordinates": {
+            "longitude": -141.518167,
+            "latitude": 60.089917
+        },
+    },
+    {
+        "launchName": "Artemis 8",
+        "launchDate": "2026-07-15 10:30:00",
+        "id": 1009,
+        "coordinates": {
+            "longitude": -150.086103,
+            "latitude": 61.694334
+        },
+    },
+    {
+        "launchName": "Artemis 9",
+        "launchDate": "2027-01-15 10:01:00",
+        "id": 10010,
+        "coordinates": {
+            "longitude": -121.17799,
+            "latitude": 48.495442
+        },
+    },
+    {
+        "launchName": "Artemis 10",
+        "launchDate": "2027-07-20 07:55:00",
+        "id": 10011,
+        "coordinates": {
+            "longitude": -75.383212,
+            "latitude": 37.91531
+        },
+    },
+    {
+        "launchName": "Artemis 11",
+        "launchDate": "2027-11-30 08:15:00",
+        "id": 10012,
+        "coordinates": {
+            "longitude": -71.056816,
+            "latitude": 44.747408
+        },
+    },
+    {
+        "launchName": "Artemis 12",
+        "launchDate": "2028-05-20 07:55:00",
+        "id": 10013,
+        "coordinates": {
+            "longitude": -75.383212,
+            "latitude": 37.91531
+        },
+    },
+    {
+        "launchName": "Artemis 13",
+        "launchDate": "2028-10-20 09:55:00",
+        "id": 10014,
+        "coordinates": {
+            "longitude": -75.383212,
+            "latitude": 37.91531
+        },
+    },
+    {
+        "launchName": "Artemis 14",
+        "launchDate": "2029-02-20 08:25:00",
+        "id": 10015,
+        "coordinates": {
+            "longitude": -75.383212,
+            "latitude": 37.91531
+        },
+    }
+]
+
